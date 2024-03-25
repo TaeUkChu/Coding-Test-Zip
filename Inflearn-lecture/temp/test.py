@@ -77,3 +77,5 @@ print(ll.get(1))
 print(ll.get(2))
 ll.remove_at(1)
 print(ll.get(1))
+
+print(3%10)
