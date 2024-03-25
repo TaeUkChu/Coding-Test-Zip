@@ -15,16 +15,15 @@ a-b의 결과를 출력한다.
 
 a = list(map(int,input()))
 b = list(map(int,input()))
-bo = False
+bo = False #b가 더 클 경우 true
 
+# 자릿수 맞춰주기
 if len(a)>len(b):
     b = [0]*(len(a)-len(b)) + b
 elif len(a)<len(b):
     a = [0]*(len(b)-len(a)) + a
 
-stack = []
-ten = 0
-
+#어떤 수가 더 큰지 or 작은지 확인
 for i in range(len(a)):
     if a[i] > b[i] :
         bo = False
@@ -33,27 +32,7 @@ for i in range(len(a)):
         continue
     else :
         bo = True
+        break
 
-
-while a and b :
-    if bo == False:
-        one_number_result = a.pop() - b.pop() + ten
-    else :
-        one_number_result = b.pop() - a.pop() + ten
-
-    ten = one_number_result//10
-    one_number_result -= 10
-    stack.append(one_number_result)
-
-temp = stack.pop()
-try :
-    while temp == 0:
-        temp = stack.pop()
-except :
-    temp = 0
-
-if bo :
-    print("-",end="")
-print(temp,end="")
-while stack :
-    print(stack.pop(),end="")
+#한 자리마다 계산
+for i in range()
