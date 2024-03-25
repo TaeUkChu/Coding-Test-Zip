@@ -65,5 +65,5 @@ def print_answer(answer):
 
 def print_answer2(answer):
     answer = str(answer).strip("[""]")
-    print(f"< {answer} >")
+    print(f"<{answer}>")
 print_answer2(answer)
