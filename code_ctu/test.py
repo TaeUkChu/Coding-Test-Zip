@@ -18,19 +18,28 @@
 # input_list = deque(enumerate(map(int,"-1 1 -1 1 -1".split(" "))))
 # print(input_list)
 
-array = [1,2,3,4]
-target= 3
+# array = [1,2,3,4]
+# target= 3
 
-start=0
-mid=0
-end=len(array)-1
+# start=0
+# mid=0
+# end=len(array)-1
 
-while start <= end :
-    mid = (start+end) // 2
-    if array[mid] == target:
-        break
-    elif array[mid] > target :
-        end = mid-1
-    else :
-        start = mid+1
-print(mid)
+# while start <= end :
+#     mid = (start+end) // 2
+#     if array[mid] == target:
+#         break
+#     elif array[mid] > target :
+#         end = mid-1
+#     else :
+#         start = mid+1
+# print(mid)
+
+import sys
+N = int(sys.stdin.readline())
+numbers=[]
+for _ in range(N):
+    numbers.append(int(sys.stdin.readline().strip()))
+numbers.sort()
+for number in numbers:
+    print(number)
