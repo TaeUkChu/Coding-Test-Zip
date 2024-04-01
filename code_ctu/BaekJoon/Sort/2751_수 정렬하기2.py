@@ -27,35 +27,45 @@ N개의 수가 주어졌을 때, 이를 오름차순으로 정렬하는 프로�
 Sol) 접근 방식
 - NlogN 시간 복잡도를 사용해야 함.
 '''
+
 import sys
+N = int(sys.stdin.readline())
+numbers=[]
+for _ in range(N):
+    numbers.append(int(sys.stdin.readline().strip()))
+numbers.sort()
+for number in numbers:
+    print(number)
+
+""" import sys
 from collections import deque
+
 N = int(input())
 numbers=[]
 for _ in range(N):
     numbers.append(int(sys.stdin.readline().strip()))
 
-# def radixSort(nums):
-#     buckets = [deque() for _ in range(10)]
+def radixSort(nums):
+    buckets = [deque() for _ in range(10)]
 
-#     max_val = max(nums)
-#     queue = deque(nums)
-#     digit = 1 # 자릿수
+    max_val = max(nums)
+    queue = deque(nums)
+    digit = 1 # 자릿수
 
-#     while (max_val >= digit): # 가장 큰 수의 자릿수일 때 까지만 실행
-#         while queue:
-#             num = queue.popleft()
-#             buckets[(num // digit) % 10].append(num)
-#             # 각 자리의 수(0~9)에 따라 버킷에 num을 넣는다.
+    while (max_val >= digit): # 가장 큰 수의 자릿수일 때 까지만 실행
+        while queue:
+            num = queue.popleft()
+            buckets[(num // digit) % 10].append(num)
+            # 각 자리의 수(0~9)에 따라 버킷에 num을 넣는다.
 
-#         # 해당 자릿수에서 버킷에 다 넣었으면, 버킷에 담겨있는 순서대로 꺼내와 정렬한다.
-#         for bucket in buckets:
-#             while bucket:
-#                 queue.append(bucket.popleft())
-#         # print(digit,"의 자릿 수 정렬: ", list(queue))
-#         digit *= 10 # 자릿수 증가시키기
-#     return list(queue)
-#     # print(list(queue))
-# sorted_numbers = radixSort(numbers)
-numbers.sort()
-for number in numbers:
-    print(number)
+        # 해당 자릿수에서 버킷에 다 넣었으면, 버킷에 담겨있는 순서대로 꺼내와 정렬한다.
+        for bucket in buckets:
+            while bucket:
+                queue.append(bucket.popleft())
+        # print(digit,"의 자릿 수 정렬: ", list(queue))
+        digit *= 10 # 자릿수 증가시키기
+    return list(queue)
+    # print(list(queue))
+sorted_numbers = radixSort(numbers)
+for number in sorted_numbers:
+    print(number) """
