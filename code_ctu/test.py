@@ -35,11 +35,17 @@
 #         start = mid+1
 # print(mid)
 
-import sys
-N = int(sys.stdin.readline())
-numbers=[]
-for _ in range(N):
-    numbers.append(int(sys.stdin.readline().strip()))
-numbers.sort()
-for number in numbers:
-    print(number)
+# import sys
+# N = int(sys.stdin.readline())
+# numbers=[]
+# for _ in range(N):
+#     numbers.append(int(sys.stdin.readline().strip()))
+# numbers.sort()
+# for number in numbers:
+#     print(number)
+
+array =[1,2,3]
+
+for i in range(len(array)-1,-1,-1):
+    print(i)
+    print(array[i])
