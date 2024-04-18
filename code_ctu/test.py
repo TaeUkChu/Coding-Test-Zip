@@ -44,8 +44,18 @@
 # for number in numbers:
 #     print(number)
 
-array =[1,2,3]
+# array =[1,2,3]
 
+"""
 for i in range(len(array)-1,-1,-1):
     print(i)
-    print(array[i])
+    print(array[i]) """
+
+for i in range(1,10):
+    print("i는",i)
+    if i == 3 :
+        break
+    for j in range(1,10):
+        print("j는",j)
+        if j == 4 :
+            break
