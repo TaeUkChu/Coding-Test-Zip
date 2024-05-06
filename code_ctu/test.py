@@ -51,11 +51,25 @@ for i in range(len(array)-1,-1,-1):
     print(i)
     print(array[i]) """
 
-for i in range(1,10):
-    print("i는",i)
-    if i == 3 :
-        break
-    for j in range(1,10):
-        print("j는",j)
-        if j == 4 :
-            break
+# for i in range(1,10):
+#     print("i는",i)
+#     if i == 3 :
+#         break
+#     for j in range(1,10):
+#         print("j는",j)
+#         if j == 4 :
+#             break
+
+from itertools import permutations
+def solution(n):
+    a = set()
+    for i in range(len(n)):
+        a |= set(map(int, map("".join, permutations(list(n), i + 1))))
+        print(a)
+    a -= set(range(0, 2))
+    for i in range(2, int(max(a) ** 0.5) + 1):
+        a -= set(range(i * 2, max(a) + 1, i))
+    return len(a)
+
+n = "110"
+print(solution(n))
