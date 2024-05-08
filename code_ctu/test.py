@@ -60,16 +60,14 @@ for i in range(len(array)-1,-1,-1):
 #         if j == 4 :
 #             break
 
-from itertools import permutations
-def solution(n):
-    a = set()
-    for i in range(len(n)):
-        a |= set(map(int, map("".join, permutations(list(n), i + 1))))
-        print(a)
-    a -= set(range(0, 2))
-    for i in range(2, int(max(a) ** 0.5) + 1):
-        a -= set(range(i * 2, max(a) + 1, i))
-    return len(a)
+n = 10
+a = [False, False] + [True]*(n-1)
+primes=[]
 
-n = "110"
-print(solution(n))
+for i in range(2, n+1):
+    if a[i]:
+        primes.append(i)
+        for j in range(2*i, n+1, i):
+            a[j] = False
+
+print (a)
