@@ -60,14 +60,17 @@ for i in range(len(array)-1,-1,-1):
 #         if j == 4 :
 #             break
 
-n = 10
-a = [False, False] + [True]*(n-1)
-primes=[]
+# n = 10
+# a = [False, False] + [True]*(n-1)
+# primes=[]
 
-for i in range(2, n+1):
-    if a[i]:
-        primes.append(i)
-        for j in range(2*i, n+1, i):
-            a[j] = False
+# for i in range(2, n+1):
+#     if a[i]:
+#         primes.append(i)
+#         for j in range(2*i, n+1, i):
+#             a[j] = False
 
-print (a)
+# print (a)
+
+index_li = [x for x in range(len)]
+print(index_li)
