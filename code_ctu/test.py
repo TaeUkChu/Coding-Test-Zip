@@ -72,5 +72,13 @@ for i in range(len(array)-1,-1,-1):
 
 # print (a)
 
-index_li = [x for x in range(len)]
-print(index_li)
+# index_li = [x for x in range(len)]
+# print(index_li)
+
+# a = []
+# print(a[-1])
+
+A = [1,2,3]
+B = [4,5,6]
+
+print([x+y for x,y in zip(A,B)])
