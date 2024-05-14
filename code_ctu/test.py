@@ -78,7 +78,12 @@ for i in range(len(array)-1,-1,-1):
 # a = []
 # print(a[-1])
 
-A = [1,2,3]
-B = [4,5,6]
+# A = [1,2,3]
+# B = [4,5,6]
 
-print([x+y for x,y in zip(A,B)])
+# print([x+y for x,y in zip(A,B)])
+
+pair = 0
+x = "*"
+pair = pair + 1 if x == "(" else pair - 1 if x == ")" else pair
+print(pair)
