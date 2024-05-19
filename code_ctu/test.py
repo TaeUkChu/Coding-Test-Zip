@@ -83,7 +83,15 @@ for i in range(len(array)-1,-1,-1):
 
 # print([x+y for x,y in zip(A,B)])
 
-pair = 0
+""" pair = 0
 x = "*"
 pair = pair + 1 if x == "(" else pair - 1 if x == ")" else pair
-print(pair)
+print(pair) """
+
+# arr = [1, 5, 2, 6, 3, 7, 4]
+# print(arr[1:3])
+
+arr = ["3","34","30"]
+arr2 = list(map(lambda x:x*3,arr))
+arr2.sort()
+print(arr2)
