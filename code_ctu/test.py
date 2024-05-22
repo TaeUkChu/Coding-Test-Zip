@@ -95,3 +95,9 @@ arr = ["3","34","30"]
 arr2 = list(map(lambda x:x*3,arr))
 arr2.sort()
 print(arr2)
+
+import heapq
+
+scoville = [1,2,3,9,10,12]
+heapq.heapify(scoville)
+print(len(scoville))
