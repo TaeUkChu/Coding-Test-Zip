@@ -1,3 +1,6 @@
+# 문제 : https://www.acmicpc.net/problem/24479
+# 참고 : https://david-kim2028.tistory.com/entry/%EB%B0%B1%EC%A4%80-24479%EB%B2%88-DFS%EC%97%90-%EB%8C%80%ED%95%B4-%EC%95%8C%EC%95%84%EB%B3%B4%EC%9E%90 
+# 정리 : https://velog.io/@uiseoo/백준-알고리즘-수업-깊이-우선-탐색-1실버2-24479
 
 import sys
 sys.setrecursionlimit(int(1e6))
@@ -6,11 +9,15 @@ input = sys.stdin.readline
 n, m, r = map(int, input().split(" ")) 
 
 
-# range(n+1)은 1부터 n까지 시작하는 그래프의 정점을 표현하기 위해서이다.
-graph = [[] for i in range(n+1)] 
+# 문제에서는 정점 개수와 간선 개수가 주어지고 인접 행렬이 주어지지 않았음으로 graph를 그려야한다!
+
+# 정점 개수와 간선 개수가 주어졌을 때의 graph 그리기!
+
 
 visited = [False] * (n+1)
 answer = [0] * (n+1)
+
+graph = [[] for i in range(n+1)]  # range(n+1)은 1부터 n까지 시작하는 그래프의 정점을 표현하기 위해서이다.
 
 for i in range(m):
     u, v = map(int, input().split(" ")) # 정점 u, v 사이의 간선 정보
@@ -22,19 +29,6 @@ for i in range(n+1):
     graph[i].sort()
 
 
-# 각 정점들과 인접한 정접들의 리스트
-# [
-    # 0   [],
-    # 1   [2, 4],
-    # 2   [1, 3, 4],
-    # 3   [2, 4],
-    # 4   [1, 2, 3],
-    # 5   []
-#    ]
-
-# DFS 함수 작성
-# 우선 탐색으로 노드를 방문할 경우
-# 노드의 방문 순서를 출력하자.
 def DFS(x):
     global order
     
