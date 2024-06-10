@@ -91,13 +91,37 @@ print(pair) """
 # arr = [1, 5, 2, 6, 3, 7, 4]
 # print(arr[1:3])
 
-arr = ["3","34","30"]
-arr2 = list(map(lambda x:x*3,arr))
-arr2.sort()
-print(arr2)
+# arr = ["3","34","30"]
+# arr2 = list(map(lambda x:x*3,arr))
+# arr2.sort()
+# print(arr2)
 
-import heapq
+# import heapq
 
-scoville = [1,2,3,9,10,12]
-heapq.heapify(scoville)
-print(len(scoville))
+# scoville = [1,2,3,9,10,12]
+# heapq.heapify(scoville)
+# print(len(scoville))
+
+# def solution(scoville, K):
+#     answer = 0
+#     heapq.heapify(scoville)
+
+#     while len(scoville) > 1 :
+#         first = heapq.heappop(scoville)
+#         if first >= K :
+#             return answer
+#         second = heapq.heappop(scoville)
+#         s_point = first + second * 2
+#         heapq.heappush(scoville,s_point)
+#         answer+=1
+#     if len(scoville) == 1 and scoville[0] >= K:
+#         return answer
+#     else:
+#         return -1
+# from itertools import product
+
+# l = [(1, -1), (2, -2)]
+# result = list(product(*l))
+# print(result)
+
+

@@ -10,18 +10,25 @@ import heapq
 scoville = [1,2,3,9,10,12]
 K = 7
 
+import heapq
 
 def solution(scoville, K):
     answer = 0
-    s_point = 0
     heapq.heapify(scoville)
-
-    while len(scoville) > 1 :
-        s_point = heapq.heappop(scoville) + heapq.heappop(scoville)*2
-        smallest = heapq.heappushpop(scoville,s_point)
-        answer+=1
-        if smallest >= K :
+    
+    while len(scoville) > 1:  # 최소 두 개 이상의 요소가 있을 때까지 반복
+        first = heapq.heappop(scoville)
+        if first >= K:
             return answer
-    return -1
+        second = heapq.heappop(scoville)
+        new_scoville = first + second * 2
+        heapq.heappush(scoville, new_scoville)
+        answer += 1
+
+    # 마지막으로 남은 하나의 요소가 조건을 충족하는지 확인
+    if len(scoville) == 1 and scoville[0] >= K:
+        return answer
+    else:
+        return -1
 
 print(solution(scoville,K))
