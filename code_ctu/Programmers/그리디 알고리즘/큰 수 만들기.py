@@ -18,7 +18,7 @@ def solution(number, k):
         answer.append(num)
 
     if k > 0:
-        answer = number[:-k]
+        answer = answer[:-k]
 
     return ''.join(answer)
 
