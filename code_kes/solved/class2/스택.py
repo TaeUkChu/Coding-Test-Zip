@@ -8,8 +8,8 @@ class Stack:
         self.array = [None]*capacity
         self.idx = -1
         
-    def push(self, item): # 삽입
-        if not self.idx == self.capacity-1: # stack이 꽉차 있지 않으면
+    def push(self, item):
+        if not self.idx == self.capacity-1:
             self.idx += 1
             self.array[self.idx] = item
         else: pass

@@ -15,14 +15,14 @@ ans = "<" + ", ".join(map(str, ans)) + ">"
 print(ans)
 
 
-ans = []
-while q:
-    for i in range(k):
-        if i == 2: 
-            temp = q.popleft()
-            ans.append(temp)
-        else:
-            temp = q.popleft()
-            q.append(temp)
-ans = "<" + ", ".join(map(str, ans)) + ">"
-print(ans)
+# ans = []
+# while q:
+#     for i in range(k):
+#         if i == 2: 
+#             temp = q.popleft()
+#             ans.append(temp)
+#         else:
+#             temp = q.popleft()
+#             q.append(temp)
+# ans = "<" + ", ".join(map(str, ans)) + ">"
+# print(ans)
