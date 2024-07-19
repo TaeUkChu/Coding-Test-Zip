@@ -22,7 +22,7 @@ for i in range(n):
         print('1 0')
     else:
         fb(temp)
-        print(memo[temp-1], memo[temp])
+        print(memo[temp-1], memo[temp]) # memo[temp-1] 0의 호출횟수,  memo[temp] 1의 호출 횟수인지?
 
 
 
